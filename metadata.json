@@ -1,0 +1,7 @@
+{
+  "name": "FINAL APP PHOTOBOOTH V2  2.0.3",
+  "description": "Semua fitur lengkap + print",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
