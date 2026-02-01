@@ -493,6 +493,13 @@ const GalleryPage: React.FC<GalleryPageProps> = ({
                     <div className="p-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 bg-black/50">
                         <label className="flex items-center gap-3 cursor-pointer group select-none">
                             <div className={`w-5 h-5 border rounded flex items-center justify-center transition-all ${useUltraQuality ? 'bg-purple-600 border-purple-500' : 'bg-black/50 border-white/20 group-hover:border-purple-400'}`}>{useUltraQuality && <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>}</div>
+                            {/* INPUT MISSING FIX */}
+                            <input 
+                                type="checkbox" 
+                                className="hidden" 
+                                checked={useUltraQuality} 
+                                onChange={(e) => setUseUltraQuality(e.target.checked)} 
+                            />
                             <div className="flex flex-col"><span className={`text-xs font-bold uppercase tracking-widest ${useUltraQuality ? 'text-purple-300' : 'text-gray-400 group-hover:text-white'}`}>USE ULTRA QUALITY</span><span className="text-[8px] text-gray-500">Warning: Slower generation time</span></div>
                         </label>
                         <button onClick={() => setShowConceptSelector(false)} className="px-6 py-3 rounded-lg text-white/50 hover:text-white text-xs font-bold uppercase tracking-widest md:ml-auto">Cancel</button>
